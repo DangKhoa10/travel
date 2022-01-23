@@ -425,7 +425,8 @@ body {
     padding: 10px;
 }
 
-.promotion-item .content .continent.purple a {
+.promotion-item .content .continent.purple a,
+.package__list .package__item .actions.purple {
     background-color: #ba71da;
 }
 
@@ -442,7 +443,8 @@ body {
     background-color: #2cc0d9;
 }
 
-.promotion-item .content .continent.orange a {
+.promotion-item .content .continent.orange a,
+.package__list .package__item .actions.orange {
     background-color: #f3a46b;
 }
 
@@ -451,7 +453,8 @@ body {
 }
 
 .promotion-item .content .continent.red a,
-.counter__up--item.red a {
+.counter__up--item.red a,
+.package__list .package__item .actions.red {
     background-color: #f76570 !important;
 }
 
@@ -682,8 +685,7 @@ body {
     padding: 5px 10px !important;
 }
 
-.package__form,
-.package__list {
+.package__form {
     margin-top: 30px;
 }
 
@@ -736,7 +738,8 @@ body {
     appearance: none;
 }
 
-.form-control {
+.form-control,
+.footer__item .action form .form-control {
     color: #a3a3a3;
     padding: 10px 20px;
     width: 100%;
@@ -751,7 +754,8 @@ body {
     color: #a3a3a3;
 }
 
-.form-submit {
+.form-submit,
+.footer__item .action form .form-submit {
     background-color: #1bbc9b;
     width: 100%;
     font-size: 16px;
@@ -777,8 +781,144 @@ body {
     font-weight: 500;
 }
 
-.package__list {}
+.package__item {
+    width: 100%;
+    border: 1px solid #f1f1f1;
+    margin-top: 30px;
+}
+
+.package__item img {
+    width: 100%;
+    height: 100%;
+}
+
+.package__item a {
+    text-decoration: none;
+}
+
+.package__item .content {
+    width: 100%;
+}
+
+.package__item .actions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.package__item .actions a.price {
+    color: #fff;
+    font-size: 30px;
+}
+
+.package__item .actions a.detail {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+}
+
+.package__item .content a {
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+    color: #a4a4a4;
+    background-color: #f9f9f9;
+    font-size: 17px;
+    padding: 20px;
+}
+
+.package__item .content p {
+    color: #a4a4a4;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 20px 20px 40px 20px;
+}
 
 #footer {
     margin-top: 65px;
+    width: 100%;
+}
+
+.footer__top {
+    width: 100%;
+    background-color: #434a54;
+}
+
+.footer__list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer__item {
+    padding-top: 15px;
+}
+
+.footer__item .content {
+    margin-bottom: 20px;
+}
+
+.footer__item .content h4 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.footer__item .content p {
+    color: #a3a3a4;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.footer__item .action p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer__item .action a i {
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.footer__item .action form .form-control {
+    font-size: 15px;
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.footer__item .action form .form__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__item .action form .form-submit {
+    width: 40%;
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 12px 20px;
+}
+
+.footer__bottom {
+    padding: 10px 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.footer__bottom p {
+    font-size: 14px;
+    color: #a3a3a4;
+}
+
+.footer__bottom .text-right {
+    text-align: right;
+}
+
+.footer__bottom .text-left {
+    text-align: left;
 }

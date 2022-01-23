@@ -287,6 +287,7 @@ body {
     overflow: hidden;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .slider img {
@@ -294,6 +295,14 @@ body {
     height: 100%;
     transition: all 0.3s;
     animation: slider 7s linear both;
+}
+
+.slider .form__slider {
+    width: 100%;
+    position: absolute;
+    top: 59%;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 @keyframes slider {
@@ -305,6 +314,55 @@ body {
         transform: scale(1.1);
         transform-origin: top;
     }
+}
+
+.slider:hover .parrows {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.parrows {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.parrows .left i,
+.parrows .right i {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.parrows .left,
+.parrows .right {
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in;
+}
+
+.parrows .left:hover,
+.parrows .right:hover {
+    background: #fff;
+}
+
+.parrows .left:hover i,
+.parrows .right:hover i {
+    color: #a3a3a4;
 }
 
 .promotion {
@@ -689,7 +747,8 @@ body {
     margin-top: 30px;
 }
 
-.package__form .form__btn {
+.package__form .form__btn,
+.slider__form .form__btn {
     border: none;
     outline: none;
     appearance: none;
@@ -703,15 +762,17 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-.package__form .form__btn:first-child {
+.package__form .form__btn:first-child,
+.slider__form .form__btn:first-child {
     margin-right: -5px;
 }
 
-.package__form .form__btn i {
+.slider__form .form__btn i {
     margin-right: 10px;
     font-size: 12px;
 }
 
+.slider__form .form__btn.active,
 .package__form .form__btn.active {
     background-color: #434a54;
     cursor: default;
@@ -722,18 +783,58 @@ body {
     display: block;
 }
 
-#form__package {
+#form__slider,
+#form__advance {
+    padding: 10px !important;
+}
+
+#form__advance .form-control,
+#form__advance .form-submit,
+#form__slider .form-control,
+#form__slider .form-submit {
+    margin-bottom: 0;
+}
+
+#form__slider .form-submit,
+#form__advance .form-submit {
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+#form__slider {
+    z-index: 2;
+}
+
+#form__advance {
+    z-index: 3;
+    transform: translateY(80px);
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.3s ease-in !important;
+}
+
+.slider .slider__form .form__btn.advanced.active~#form__advance {
+    transform: translateY(-79px);
+    pointer-events: auto;
+    visibility: visible;
+}
+
+#form__advance,
+#form__package,
+#form__slider {
     background-color: #434a54;
     padding: 25px;
-    transition: all 0.3s ease-in-out;
     height: auto;
+    transition: height 0.3s ease-in-out;
 }
 
 #form__package textarea {
     height: 150px;
 }
 
-#form__package select {
+#form__advance select,
+#form__package select,
+#form__slider select {
     cursor: pointer;
     appearance: none;
 }

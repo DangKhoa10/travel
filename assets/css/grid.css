@@ -263,6 +263,10 @@
         margin-left: -5px;
         margin-right: -5px;
     }
+    .row.slider-gutter {
+        margin-left: 0;
+        margin-right: 0;
+    }
     .row.lm-gutter {
         margin-left: 0;
         margin-right: 0;
@@ -282,6 +286,9 @@
     .row.lm-gutter .col {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .row.slider-gutter .col {
+        padding: 10px;
     }
     .row.sm-sm-gutter .col {
         padding-left: 0;

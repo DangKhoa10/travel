@@ -1,0 +1,109 @@
+@media (min-width:960px) and (max-width:1200px) {
+    .wide {
+        width: 930px;
+    }
+}
+
+@media (min-width:770px) and (max-width:959px) {
+    .wide {
+        width: 740px;
+    }
+    .slider .form__slider {
+        width: 740px;
+    }
+}
+
+@media (max-width: 769px) {
+    .wide {
+        width: 450px;
+    }
+    .slider .form__slider {
+        width: 450px;
+    }
+}
+
+
+/*Cả 2*/
+
+@media (max-width:1200px) {
+    .hideOnTwo {
+        display: none;
+    }
+    .slider .form__slider {
+        position: static;
+        top: unset;
+        left: unset;
+        transform: translateX(0);
+    }
+    .header__display {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .header__bottom {
+        height: auto;
+    }
+    .header__bottom--logo {
+        margin-top: 20px;
+    }
+    .header__bottom--bar-icon {
+        display: block;
+    }
+    .row.slider-gutter .col {
+        padding: 10px !important;
+    }
+    .sm-sm-gutter .col {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .row.sm-sm-gutter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .col {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .counter__up {
+        height: auto;
+        padding: 80px 0;
+    }
+    .counter__up--list {
+        flex-direction: column;
+    }
+    .counter__up--item {
+        margin: 20px 0;
+    }
+    .package__form {
+        margin-bottom: 30px;
+    }
+    .package__item .actions a.detail {
+        display: none;
+    }
+    .package__item .content a {
+        background-color: transparent;
+        border-bottom: none;
+        color: #5e6d81;
+        font-size: 20px;
+        padding: 0 20px;
+        margin: 20px 0;
+    }
+    .package__item .content p {
+        padding: 0 20px 20px 20px;
+    }
+    .footer__item .action {
+        margin-bottom: 50px;
+    }
+    .footer__list {
+        padding-bottom: 20px;
+    }
+    .text-center-k {
+        text-align: center !important;
+    }
+    .footer__bottom .text-left {
+        margin-bottom: 10px;
+    }
+    .k-12 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}

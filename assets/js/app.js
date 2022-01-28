@@ -30,3 +30,11 @@ btn_form_advanced.onclick = () => {
         btn_form_search.classList.toggle('active')
     }
 }
+
+
+const nav_control = document.querySelector('.control_nav')
+const nav__mobile = document.querySelector('.nav__mobile')
+nav_control.onclick = () => {
+    nav__mobile.classList.toggle('small')
+    nav_control.classList.toggle('roll')
+}

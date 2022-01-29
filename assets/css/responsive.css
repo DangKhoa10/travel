@@ -38,6 +38,14 @@
     .slider .form__slider {
         margin-top: -70px !important;
     }
+    .slider--po .sale {
+        top: 50%;
+        left: 56%;
+    }
+    .slider--po .dola {
+        top: 52%;
+        left: 77%;
+    }
 }
 
 
